@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="custom_padding_horizontal">12dp</dimen>
+    <dimen name="custom_padding_vertical">8dp</dimen>
+    <dimen name="custom_tab_height">48dp</dimen>
+    <dimen name="custom_item_height">56dp</dimen>
+    <dimen name="custom_button_height">58dp</dimen>
+    <dimen name="custom_app_bar_height">160dp</dimen>
+    <dimen name="custom_banner_height">360dp</dimen>
+    <dimen name="home_banner_height">109dp</dimen>
+    <dimen name="home_img_height">100dp</dimen>
+    <dimen name="section_divider">6dp</dimen>
+    <dimen name="main_tab_height">54dp</dimen>
+
+    <dimen name="text_size_title_dp">16dp</dimen>
+    <dimen name="text_size_item_dp">14dp</dimen>
+    <dimen name="text_size_content_dp">12dp</dimen>
+    <dimen name="text_size_tips_dp">10dp</dimen>
+
+    <dimen name="text_size_title">16dp</dimen>
+    <dimen name="text_size_item">14dp</dimen>
+    <dimen name="text_size_content">12dp</dimen>
+    <dimen name="text_size_tips">10dp</dimen>
+
+    <dimen name="size_0">0dp</dimen>
+    <dimen name="size_1">1dp</dimen>
+    <dimen name="size_2">2dp</dimen>
+    <dimen name="size_3">3dp</dimen>
+    <dimen name="size_4">4dp</dimen>
+    <dimen name="size_5">5dp</dimen>
+    <dimen name="size_6">6dp</dimen>
+    <dimen name="size_7">7dp</dimen>
+    <dimen name="size_8">8dp</dimen>
+    <dimen name="size_9">9dp</dimen>
+    <dimen name="size_10">10dp</dimen>
+    <dimen name="size_11">11dp</dimen>
+    <dimen name="size_12">12dp</dimen>
+    <dimen name="size_13">13dp</dimen>
+    <dimen name="size_14">14dp</dimen>
+    <dimen name="size_15">15dp</dimen>
+    <dimen name="size_16">16dp</dimen>
+    <dimen name="size_17">17dp</dimen>
+    <dimen name="size_18">18dp</dimen>
+    <dimen name="size_19">19dp</dimen>
+    <dimen name="size_20">20dp</dimen>
+    <dimen name="size_21">21dp</dimen>
+    <dimen name="size_22">22dp</dimen>
+    <dimen name="size_23">23dp</dimen>
+    <dimen name="size_24">24dp</dimen>
+    <dimen name="size_25">25dp</dimen>
+    <dimen name="size_26">26dp</dimen>
+    <dimen name="size_27">27dp</dimen>
+    <dimen name="size_28">28dp</dimen>
+    <dimen name="size_29">29dp</dimen>
+    <dimen name="size_30">30dp</dimen>
+    <dimen name="size_32">32dp</dimen>
+    <dimen name="size_33">33dp</dimen>
+    <dimen name="size_34">34dp</dimen>
+    <dimen name="size_40">40dp</dimen>
+    <dimen name="size_42">42dp</dimen>
+    <dimen name="size_44">44dp</dimen>
+    <dimen name="size_47">47dp</dimen>
+    <dimen name="size_48">48dp</dimen>
+    <dimen name="size_50">50dp</dimen>
+    <dimen name="size_60">60dp</dimen>
+    <dimen name="size_70">70dp</dimen>
+    <dimen name="size_75">75dp</dimen>
+    <dimen name="size_80">80dp</dimen>
+    <dimen name="size_90">90dp</dimen>
+    <dimen name="size_100">100dp</dimen>
+    <dimen name="size_120">120dp</dimen>
+    <dimen name="size_130">130dp</dimen>
+    <dimen name="size_140">140dp</dimen>
+    <dimen name="size_150">150dp</dimen>
+    <dimen name="size_160">160dp</dimen>
+    <dimen name="size_200">200dp</dimen>
+
+
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+</resources>

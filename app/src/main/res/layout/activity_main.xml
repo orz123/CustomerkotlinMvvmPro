@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".core.view.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.chaychan.library.BottomBarLayout
+        android:id="@+id/bottomBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@color/tab_bottom_bar_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/ic_home_unsel"
+            app:iconSelected="@drawable/ic_home_sel"
+            app:itemMarginTop="@dimen/size_2"
+            app:itemText="@string/ui_main_tab_home"
+            app:itemTextSize="@dimen/size_10"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:touchDrawable="@drawable/sel_bg_tab" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/ic_wallet_unsel"
+            app:iconSelected="@drawable/ic_wallet_sel"
+            app:itemMarginTop="@dimen/size_2"
+            app:itemText="@string/ui_main_tab_wallet"
+            app:itemTextSize="@dimen/size_10"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:touchDrawable="@drawable/sel_bg_tab"
+            app:unreadThreshold="999" />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/ic_contract_unsel"
+            app:iconSelected="@drawable/ic_contract_sel"
+            app:itemMarginTop="@dimen/size_2"
+            app:itemText="@string/ui_main_tab_contract"
+            app:itemTextSize="@dimen/size_10"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:touchDrawable="@drawable/sel_bg_tab" />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/ic_mine_unsel"
+            app:iconSelected="@drawable/ic_mine_sel"
+            app:itemMarginTop="@dimen/size_2"
+            app:itemText="@string/ui_main_tab_mine"
+            app:itemTextSize="@dimen/size_10"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:touchDrawable="@drawable/sel_bg_tab" />
+
+    </com.chaychan.library.BottomBarLayout>
+</LinearLayout>

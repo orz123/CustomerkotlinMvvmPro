@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.orz.kotlin_mvvm_demo">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".App"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.orz.kotlin_mvvm_demo.glide.GlideConfig"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+        <activity
+            android:name=".core.view.splash.SplashActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".core.view.main.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".core.view.guide.GuideActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".core.view.paging.RoleActivity"
+            android:theme="@style/NoActionBar"/>
+    </application>
+
+</manifest>

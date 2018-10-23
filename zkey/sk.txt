@@ -1,0 +1,38 @@
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: share365
+Creation date: May 5, 2018
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Share365, OU=陕西今致莉豪信息科技有限公司, O=陕西今致莉豪信息科技有限公司, L=西安, ST=陕西, C=CN
+Issuer: CN=Share365, OU=陕西今致莉豪信息科技有限公司, O=陕西今致莉豪信息科技有限公司, L=西安, ST=陕西, C=CN
+Serial number: 2ab4e09f
+Valid from: Fri Nov 10 19:35:30 CST 2017 until: Tue Nov 04 19:35:30 CST 2042
+Certificate fingerprints:
+	 MD5:  E2:7A:6A:3D:4C:42:9D:32:18:B9:D3:02:13:C3:42:15
+	 SHA1: FA:73:0E:D9:02:C5:7B:8A:0E:3D:F5:4C:FD:A8:B7:F5:A3:41:1B:4C
+	 SHA256: 6D:A6:A9:F0:31:19:EB:09:88:7D:18:D9:02:DF:4B:53:4E:C8:AD:FD:94:2F:2D:49:0C:F9:73:5F:C1:1E:66:25
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: DB EE 1C 94 94 B9 5E B0   FF C0 BC 99 8A F2 52 5C  ......^.......R\
+0010: B0 E6 03 F2                                        ....
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+

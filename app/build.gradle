@@ -1,0 +1,165 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //MultiDex分包方法
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            debuggable false
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (variant.buildType.name == 'release') {
+                outputFileName = "${rootProject.getRootProject().name}_${variant.versionName}_${variant.versionCode}.apk"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //防止编译的时候oom、GC
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    //解决.9图问题
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+        }
+        test.java.srcDirs += 'src/test/java'
+        androidTest.java.srcDirs += 'src/androidTest/java'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["support-annotations"]
+
+    //MultiDex分包方法
+    implementation rootProject.ext.dependencies["multidex"]
+    //kotlin
+    implementation rootProject.ext.dependencies["kotlin-stdlib"]
+    implementation rootProject.ext.dependencies["kotlin-anko"]
+
+    //网络
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit-gson"]
+    implementation rootProject.ext.dependencies["retrofit-adapter"]
+    implementation rootProject.ext.dependencies["retrofit-scalars"]
+    implementation rootProject.ext.dependencies["retrofit-interceptor"]
+    //Rx
+    implementation rootProject.ext.dependencies["rx-java"]
+    implementation rootProject.ext.dependencies["rx-android"]
+    //6.0权限
+    implementation rootProject.ext.dependencies["rxpermissions"]
+    //图片
+    implementation rootProject.ext.dependencies["glide"]
+    //bottomBarLayout
+    implementation rootProject.ext.dependencies["bottomBarLayout"]
+    //ViewModel && LiveData
+    implementation rootProject.ext.dependencies["lifecycle-runtime"]
+    implementation rootProject.ext.dependencies["lifecycle-extensions"]
+    implementation rootProject.ext.dependencies["lifecycle-java8"]
+    implementation rootProject.ext.dependencies["lifecycle-reactivestreams"]
+    kapt rootProject.ext.dependencies["lifecycle-compiler"]
+    // di
+    implementation rootProject.ext.dependencies["dagger-android"]
+    implementation rootProject.ext.dependencies["dagger-android-support"]
+    kapt rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-android-processor"]
+    //paging
+    implementation rootProject.ext.dependencies["paging-runtime"]
+    implementation rootProject.ext.dependencies["paging-rxjava2"]
+    //smartrefresh
+    implementation rootProject.ext.dependencies["smartRefreshLayout"]
+    implementation rootProject.ext.dependencies["smartRefreshHeader"]
+    //db-room
+    implementation rootProject.ext.dependencies["room-runtime"]
+    implementation rootProject.ext.dependencies["room-rxjava2"]
+    kapt rootProject.ext.dependencies["room-compiler"]
+    //banner
+    implementation rootProject.ext.dependencies["banner"]
+    //rxbinding
+    implementation rootProject.ext.dependencies["rxbinding"]
+    //adapter
+    implementation rootProject.ext.dependencies["baseRecyclerViewAdapterHelper"]
+    //flycoTabLayout
+    implementation rootProject.ext.dependencies["flycoTabLayout"]
+    //niceDialog
+    implementation rootProject.ext.dependencies["niceDialog"]
+    //selector time/area
+    implementation rootProject.ext.dependencies["pickerView"]
+    //EventBus
+    implementation rootProject.ext.dependencies["eventbus"]
+    //error handler
+    implementation rootProject.ext.dependencies["loadsir"]
+
+}

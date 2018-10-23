@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpGuide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/mBtnEnter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_200"
+        android:layout_marginBottom="@dimen/size_40"
+        android:alpha="0"
+        android:layout_gravity="bottom"/>
+</FrameLayout>
