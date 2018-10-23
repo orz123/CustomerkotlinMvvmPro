@@ -86,6 +86,9 @@ ext {
                     //Bus
                     "eventbus"                     : 'org.greenrobot:eventbus:3.1.1',
 
+                    //android 4.4以上沉浸式状态栏和沉浸式导航栏管理
+                    "immersionbar"                 : 'com.gyf.immersionbar:immersionbar:2.3.2-beta01',
+
                     //butterknife
                     "butterknife"                  : 'com.jakewharton:butterknife:8.8.1',
                     "butterknife-compiler"         : 'com.jakewharton:butterknife-compiler:8.8.1',
@@ -130,8 +133,6 @@ ext {
                     "gsy-video-java"               : 'com.shuyu:gsyVideoPlayer-java:4.1.0',
                     "gsy-video-armv7a"             : 'com.shuyu:gsyVideoPlayer-armv7a:4.1.0',
                     "gsy-video-x86"                : 'com.shuyu:gsyVideoPlayer-x86:4.1.0',
-                    //jie cao video
-                    "jieCao-video"                 : 'cn.jzvd:jiaozivideoplayer:6.2.7',
 
                     //download 高效的文件下载框架
                     "aria-core"                    : 'com.arialyy.aria:aria-core:3.5',
@@ -148,6 +149,9 @@ ext {
 
                     //banner
                     "banner"                       : 'com.youth.banner:banner:1.4.10',
+
+                    //circle imageView
+                    "circleimageview"              : 'de.hdodenhof:circleimageview:2.2.0',
 
                     //adapter
                     "baseRecyclerViewAdapterHelper": 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.43-alpha1',
