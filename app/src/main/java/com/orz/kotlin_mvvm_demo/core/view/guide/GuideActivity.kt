@@ -3,6 +3,7 @@ package com.orz.kotlin_mvvm_demo.core.view.guide
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.view.View
 import com.orz.kotlin_mvvm_demo.R
@@ -63,7 +64,7 @@ class GuideActivity :BaseActivity(), ViewPager.OnPageChangeListener{
     companion object {
         fun jumpActivity(context: Context) {
             val intent = Intent(context, GuideActivity::class.java)
-            context.startActivity(intent)
+            ContextCompat.startActivity(context,intent,null)
         }
     }
 

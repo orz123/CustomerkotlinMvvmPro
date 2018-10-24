@@ -71,7 +71,7 @@ abstract class BaseFragment : Fragment() {
     /**
      * 当界面可见时的操作
      */
-    protected fun onVisible() {
+    protected open fun onVisible() {
         if (mIsFirstVisible && isResumed) {
             lazyLoad()
             mIsFirstVisible = false
@@ -95,7 +95,7 @@ abstract class BaseFragment : Fragment() {
     /**
      * 当界面不可见时的操作
      */
-    protected fun onInVisible() {
+    protected open fun onInVisible() {
 
     }
 

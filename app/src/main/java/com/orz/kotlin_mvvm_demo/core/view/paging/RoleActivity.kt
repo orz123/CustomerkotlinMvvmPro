@@ -4,11 +4,10 @@ import android.arch.lifecycle.Observer
 import android.arch.paging.PagedList
 import android.content.Context
 import android.content.Intent
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.orz.kotlin_mvvm_demo.R
-import com.orz.kotlin_mvvm_demo.R.id.recyclerView
-import com.orz.kotlin_mvvm_demo.base.BaseActivity
 import com.orz.kotlin_mvvm_demo.base.KeepTitleLoadSirActivity
 import com.orz.kotlin_mvvm_demo.callback.loadsir.EmptyCallback
 import com.orz.kotlin_mvvm_demo.callback.loadsir.ErrorCallback
@@ -72,7 +71,7 @@ class RoleActivity:KeepTitleLoadSirActivity() {
     companion object {
         fun jumpActivity(context: Context) {
             val intent = Intent(context, RoleActivity::class.java)
-            context.startActivity(intent)
+            ContextCompat.startActivity(context,intent,null)
         }
     }
 }

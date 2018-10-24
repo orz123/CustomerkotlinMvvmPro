@@ -7,6 +7,8 @@
 
     <string name="ui_page_test">Paging 分页数据加载示例</string>
     <string name="ui_regain_verification_code">重新获取验证码</string>
+    <string name="ui_loading">正在加载...</string>
+    <string name="ui_committing">正在提交...</string>
 
     <string name="hint_app_exit">再按一次退出程序</string>
     <string name="hint_empty_data">暂无数据</string>

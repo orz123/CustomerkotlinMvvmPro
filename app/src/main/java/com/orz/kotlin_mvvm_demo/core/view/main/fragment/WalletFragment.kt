@@ -1,9 +1,11 @@
 package com.orz.kotlin_mvvm_demo.core.view.main.fragment
 
+import android.os.Handler
 import android.widget.TextView
-import com.orz.kotlin_mvvm_demo.di.Injectable
 import com.orz.kotlin_mvvm_demo.R
 import com.orz.kotlin_mvvm_demo.base.BaseFragment
+import com.orz.kotlin_mvvm_demo.comment.ProgressDialogHelper
+import com.orz.kotlin_mvvm_demo.di.Injectable
 import org.jetbrains.anko.support.v4.find
 
 /**
@@ -20,7 +22,18 @@ class WalletFragment:BaseFragment(), Injectable {
         title.text = getString(R.string.ui_main_tab_wallet)
     }
 
+
+
     override fun lazyLoad() {
 
     }
+
+    override fun onVisible(){
+        super.onVisible()
+        activity?.run { ProgressDialogHelper.init(this).showDialog() }
+        Handler().postDelayed({
+            ProgressDialogHelper.dismissDialog()
+        },2000)
+    }
+
 }

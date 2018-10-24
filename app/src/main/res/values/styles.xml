@@ -27,5 +27,10 @@
         <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
     </style>
+    <!--LoadingDialog-->
+    <style name="LoadingDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 
 </resources>

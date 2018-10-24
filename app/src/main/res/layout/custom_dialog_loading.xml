@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_loading_dialog">
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/skv_loading"
+        style="@style/SpinKitView.Small.FadingCircle"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        app:SpinKit_Color="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/size_20"
+        android:text="@string/ui_loading"
+        android:textSize="@dimen/size_16"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

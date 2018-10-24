@@ -3,6 +3,7 @@ package com.orz.kotlin_mvvm_demo.core.view.main
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.KeyEvent
 import android.widget.Toast
 import com.chaychan.library.BottomBarItem
@@ -74,7 +75,7 @@ class MainActivity : BaseActivity(),HasSupportFragmentInjector,
     companion object {
         fun jumpActivity(context: Context) {
             val intent = Intent(context, MainActivity::class.java)
-            context.startActivity(intent)
+            ContextCompat.startActivity(context,intent,null)
         }
     }
 

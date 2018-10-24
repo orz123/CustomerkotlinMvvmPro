@@ -1,7 +1,6 @@
 package com.orz.kotlin_mvvm_demo.base
 
 import android.annotation.TargetApi
-import android.app.ProgressDialog
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.DrawableRes
@@ -29,7 +28,6 @@ abstract class BaseActivity : AppCompatActivity() {
     private var mCommonToolbar: Toolbar? = null
     private var mTitle: TextView? = null
     private var mRightTv: TextView? = null
-    private var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         if (isInject) {
@@ -164,50 +162,12 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * 获取进度条
-     */
-    fun getProgressBar():ProgressDialog{
-        if (progressDialog == null){
-            progressDialog = ProgressDialog(this)
-        }
-        return progressDialog!!
-    }
-    /**
-     * 显示进度条
-     */
-    fun showProgressBar() {
-        progressDialog?.let {
-            it.show()
-        }
-
-    }
-
-    /**
-     * 隐藏进度条
-     */
-    fun hideProgressBar() {
-        if (progressDialog != null) {
-            progressDialog?.hide()
-        }
-    }
-
-    /**
-     * 关闭进度条
-     */
-    fun dismissDialog() {
-        if (progressDialog != null) {
-            progressDialog?.dismiss()
-            progressDialog = null
-        }
-    }
 
     override fun onDestroy() {
         super.onDestroy()
         if (isHasBus){
             EventBus.getDefault().unregister(this)
         }
-        dismissDialog()
     }
 
 }

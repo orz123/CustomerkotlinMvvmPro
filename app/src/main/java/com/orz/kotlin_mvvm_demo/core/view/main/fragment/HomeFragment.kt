@@ -38,7 +38,7 @@ class HomeFragment :KeepTitleLoadSirFragment(), Injectable {
                 mLoadService?.showCallback(ErrorCallback::class.java)
             }
 
-        },1000)
+        },2000)
     }
 
     override fun lazyLoad() {

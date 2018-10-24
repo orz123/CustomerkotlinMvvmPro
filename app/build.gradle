@@ -160,5 +160,7 @@ dependencies {
     implementation rootProject.ext.dependencies["eventbus"]
     //error handler
     implementation rootProject.ext.dependencies["loadsir"]
+    //loading
+    implementation rootProject.ext.dependencies["androidSpinKit"]
 
 }
